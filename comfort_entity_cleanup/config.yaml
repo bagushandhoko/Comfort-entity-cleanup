@@ -1,18 +1,15 @@
-name: "Comfort Entity Cleanup"
+name: Comfort Entity Cleanup
 version: "1.0.0"
-slug: "comfort_entity_cleanup"
-description: "Hapus entitas Home Assistant yang tidak aktif atau unavailable."
+slug: comfort_entity_cleanup
+description: Automatically removes unavailable entities caused by deleted YAML files.
+startup: services
+boot: auto
+homeassistant_api: true
+init: false
 arch:
   - amd64
   - armv7
   - armhf
   - aarch64
-startup: once
-boot: manual
-options:
-  ha_url: "http://supervisor/core/api"
-  token: "ISI_TOKEN_KAMU"
-schema:
-  ha_url: str
-  token: str
-image: "local/comfort_entity_cleanup"
+options: {}
+schema: {}
