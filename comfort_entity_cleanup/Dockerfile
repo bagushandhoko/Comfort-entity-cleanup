@@ -1,7 +1,13 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base-python:10.2.3
+# Base image Home Assistant yang mendukung ARMv7
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:14.3.2
 FROM ${BUILD_FROM}
 
-COPY run.py /
-RUN chmod a+x /run.py
+# Install Python 3
+RUN apk add --no-cache python3 py3-pip
 
-CMD [ "python3", "/run.py" ]
+# Copy semua file repo
+COPY . /app
+WORKDIR /app
+
+# Jalankan script utama
+CMD ["python3", "/app/run.py"]
