@@ -3,8 +3,7 @@ version: "1.0.0"
 slug: "comfort_entity_cleanup"
 description: "Automatically remove unavailable entities caused by deleted YAML"
 arch:
-  - aarch64
-  - amd64
+  - armv7
 startup: services
 boot: manual
 options: {}
