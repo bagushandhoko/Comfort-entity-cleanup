@@ -1,0 +1,15 @@
+name: Comfort Entity Cleanup
+version: 1.0.0
+slug: comfort_entity_cleanup
+description: "Hapus entitas unavailable akibat YAML dihapus"
+arch: 
+  - aarch64
+  - amd64
+  - armv7
+startup: "before"
+boot: "auto"
+host_network: false
+map:
+  config: /config
+options: {}
+schema: {}
