@@ -1,14 +1,11 @@
 name: "Comfort Entity Cleanup"
 version: "1.0.0"
-slug: comfort_entity_cleanup
-description: "Hapus entitas unavailable akibat YAML dihapus."
+slug: "comfort_entity_cleanup"
+description: "Automatically remove unavailable entities caused by deleted YAML"
 arch:
-  - amd64
-  - armv7
   - aarch64
+  - amd64
 startup: services
-boot: auto
-homeassistant_api: true
-init: false
+boot: manual
 options: {}
 schema: {}
