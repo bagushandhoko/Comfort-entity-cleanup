@@ -1,0 +1,4 @@
+# contoh placeholder file YAML
+comfort_entities:
+  - comfort2mqtt_input1
+  - comfort2mqtt_output1
