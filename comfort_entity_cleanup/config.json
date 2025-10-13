@@ -1,7 +1,7 @@
 {
   "name": "Comfort Entity Cleanup",
   "version": "1.0.0",
-  "slug": "comfort-entity-cleanup",
+  "slug": ""slug": "4634b1f2_comfort_entity_cleanup",
   "description": "Membersihkan entitas Comfort yang tidak didefinisikan di YAML.",
   "startup": "before",
   "boot": "auto",
