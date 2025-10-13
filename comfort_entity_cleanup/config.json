@@ -1,11 +1,11 @@
 {
   "name": "Comfort Entity Cleanup",
   "version": "1.0.0",
-  "slug": "4634b1f2-comfort-entity-cleanup",
-  "description": "Membersihkan entitas Comfort yang tidak didefinisikan di YAML.",
+  "slug": "4634b1f2_comfort_entity_cleanup",
+  "description": "Hapus entitas Comfort yang tidak ada di YAML",
   "startup": "before",
-  "boot": "auto",
   "arch": ["aarch64", "amd64", "armv7", "armhf"],
+  "boot": "auto",
   "ports": {},
   "options": {
     "HA_URL": "http://supervisor/core",
