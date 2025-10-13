@@ -1,6 +1,0 @@
-- name: GarageRightArea
-  state_topic: "comfort/zone/1"
-  device_class: occupancy
-- name: GarageLeftArea
-  state_topic: "comfort/zone/2"
-  device_class: occupancy
