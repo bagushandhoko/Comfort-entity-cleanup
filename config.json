@@ -1,7 +1,7 @@
 {
   "name": "Comfort Entity Cleanup",
   "version": "1.0.0",
-  "slug": "comfort_entity_cleanup",
+  "slug": "4634b1f2-comfort-entity-cleanup",
   "description": "Menghapus entitas Comfort yang tidak ada di YAML Home Assistant.",
   "startup": "before",
   "arch": ["aarch64", "amd64", "armv7", "armhf"],
