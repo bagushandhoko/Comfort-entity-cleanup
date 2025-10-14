@@ -1,0 +1,11 @@
+name: Comfort Entity Cleanup
+version: "1.0.0"
+slug: comfort_entity_cleanup
+description: Clean up unused comfort2mqtt entities in Home Assistant
+arch:
+  - amd64
+  - armv7
+  - aarch64
+startup: services
+boot: auto
+init: false
