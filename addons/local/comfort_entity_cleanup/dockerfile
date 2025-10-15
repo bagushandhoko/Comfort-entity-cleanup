@@ -1,19 +1,22 @@
-# Gunakan base image bawaan Home Assistant
-ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base:latest
+# Gunakan base image resmi Home Assistant
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:15.0.6
 FROM ${BUILD_FROM}
 
-# Tambahkan Python
+# Pastikan Python dan pip tersedia
 RUN apk add --no-cache python3 py3-pip
 
-# Folder kerja di dalam container
+# Set direktori kerja di dalam container
 WORKDIR /app
 
-# Salin semua file ke /app
+# Salin seluruh file dari folder addon ke /app di container
 COPY . /app
 
-# Pastikan file bisa dijalankan
+# Beri izin eksekusi untuk script utama
 RUN chmod +x /app/run.sh
-RUN chmod +x /app/main.py
+RUN chmod +x /app/run.py
 
-# Jalankan script utama
-CMD ["/app/run.sh"]
+# Jalankan instalasi dependensi (jika ada)
+RUN pip install --no-cache-dir -r requirements.txt || true
+
+# Entry point — yang akan dijalankan saat addon start
+CMD [ "/app/run.sh" ]
