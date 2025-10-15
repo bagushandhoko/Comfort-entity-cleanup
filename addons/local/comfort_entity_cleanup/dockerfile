@@ -1,11 +1,19 @@
-# Gunakan base image resmi Home Assistant dengan Python 3 bawaan
-ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base-python:3.11
+# Gunakan base image Python bawaan Home Assistant
+ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base:latest
 FROM ${BUILD_FROM}
 
+# Tambahkan Python
+RUN apk add --no-cache python3 py3-pip
+
+# Folder kerja di dalam container
 WORKDIR /app
 
+# Salin semua file addon ke /app
 COPY . /app
 
+# Pastikan file bisa dijalankan
 RUN chmod +x /app/run.sh
+RUN chmod +x /app/main.py
 
+# Jalankan script utama
 CMD ["/app/run.sh"]
