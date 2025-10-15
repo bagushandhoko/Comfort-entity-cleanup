@@ -1,0 +1,17 @@
+{
+  "name": "Comfort Entity Cleanup",
+  "version": "1.1.0",
+  "slug": "comfort_entity_cleanup",
+  "description": "Deteksi dan hapus entitas Comfort yang tidak ada di YAML Home Assistant.",
+  "startup": "before",
+  "arch": ["amd64", "aarch64", "armv7", "armhf"],
+  "boot": "auto",
+  "options": {
+    "HA_URL": "http://supervisor/core",
+    "HA_TOKEN": ""
+  },
+  "schema": {
+    "HA_URL": "str",
+    "HA_TOKEN": "str"
+  }
+}
