@@ -1,12 +1,13 @@
 name: "Comfort Entity Cleanup"
 version: "1.0.0"
 slug: "comfort_entity_cleanup"
-description: "Cleanup entitas Comfort tak terpakai"
+description: "Membersihkan entitas Comfort yang tidak terpakai dari registry Home Assistant."
 arch:
   - aarch64
   - amd64
   - armv7
-startup: "once"
-boot: "manual"
+startup: once
+boot: manual
 options: {}
 schema: {}
+homeassistant_api: true
